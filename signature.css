@@ -1,0 +1,371 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    perspective: 500px;
+}
+*::selection{
+    background-color: white;
+    color:  rgb(78, 138, 138);
+}
+#nav{
+    height: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 170px;
+    justify-content: flex-start;
+    gap: 50px;
+    z-index: 5;
+    position: fixed;
+    text-decoration: none;
+}
+#cursor{
+    height: 25px;
+    width: 25px;
+    background-color: rgb(78, 138, 138);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 10;
+}
+#cursor-blur{
+    height: 250px;
+    width: 250px;
+    background-color: rgba(78, 138, 138, 0.682);
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(50px);
+    z-index: 10;
+}
+#nav img{
+    height: 85px;
+}
+#nav h4{
+    font-size: medium;
+   
+}
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+#main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.178);
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 11;
+}
+#page1 h1{
+    font-size: 110px;
+    font-weight: 900;
+    position: relative;
+}
+#page h2{
+    font-size: 180px;
+    font-weight: 900;
+    
+}
+#page1 p{
+    margin-top: 10px;
+    width: 35%;
+    font-weight: 400;
+    font-size: 14px;
+
+}
+#page1 h1::before{
+    content: "DECK. COCKPIT. PORT.";
+    color: black;
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    -webkit-text-stroke: 3px rgb(78, 138, 138);
+    z-index: -1;
+}
+#page1 #arrow1{
+    height: 140px;
+    width: 140px;
+    font-size: 60px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid #94bce9;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 50%;
+    left: 1%;
+    bottom: -1%;
+    transition: all ease 0.5s;
+}
+#arrow1:hover{
+    scale: 0.4;
+    background-color: #94bce9;
+}
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    z-index: 11;
+}
+#scroller{
+    overflow-x:auto ;
+    overflow-y: hidden;
+    white-space: nowrap;
+    position: relative;
+    z-index: 10;
+}
+#scroller1{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;  
+}
+#scroller h4{
+    display: inline-block;
+    font-size: 120px;
+    font-weight: 900;
+    transition: all linear 0.3s;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    -webkit-text-stroke: 3px rgb(237, 237, 237);
+    color: transparent;
+}
+#scroller h4:hover{
+    color: rgb(230, 230, 230);
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+@keyframes scroll {
+    from{
+        transform: translate(0%);
+    }
+    to{
+        transform: translate(-100%);
+    }
+}
+#aboutus img{
+    height: 210px;
+    width: 250px;
+}
+#aboutus{
+    display: flex;
+    height: 40vh;
+    width: 100%;
+    /* background-color: brown; */
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    text-align: center;
+    
+}
+#aboutus p{
+   font-size: 15px;
+   font-weight: 100;
+}
+#aboutus h3{
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+#cards{
+    height: 65%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 75px;
+    position: relative;
+    z-index: 10;
+    padding: 28px;
+    
+}
+#card{
+    height: 70%;
+    width: 25% ;
+    align-items: center;
+    border-radius: 10px;
+    background-size:cover;
+    background-position:center;
+   
+    
+}
+#card1{
+    background-image: url(https://media.licdn.com/dms/image/v2/C4E22AQEP03yT0-ZfUQ/feedshare-shrink_800/feedshare-shrink_800/0/1666611594137?e=2147483647&v=beta&t=xqZXMKkFSDQGJrRKBU6-m0rE51YX4K1RLGW-smDafWs);
+    border-radius: 15px;
+}
+#card2{
+    background-image: url(https://cdn.northropandjohnson.com/uploads/LIONSHARE-5official.jpg?auto=format&q=35&h=1&w=854);
+    border-radius: 15px;
+    
+}
+#card3{
+    background-image: url(https://www.yacht.vacations/wp-content/uploads/2021/07/Zaliv-3418brochure18.jpg);
+    border-radius: 15px;
+}
+
+#over{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(32, 125, 191);
+    padding: 10px 10px;
+    opacity: 0;
+    transition: all ease 0.9s;
+}
+#over h1{
+    margin: 20px;
+}
+#over:hover{
+    opacity: 1;
+}
+#card1:hover{
+    transform: rotate3d(1,1,0,30deg);
+}
+#card2:hover{
+    transform: rotate3d(1,1,0,30deg);
+}
+#card3:hover{
+    transform: rotate3d(1,1,0,30deg);
+}
+#green{
+    background-color: #94bce9b5;
+    height: 25vh;
+    width: 100%;
+    background-image: url(download3.png);
+}
+#green h1{
+    text-align: center;
+    padding: 48px 0;
+    line-height: 50px;
+    font-weight: 800;
+
+}
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#page3>p{
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    width: 50%;
+    font-weight: 600;
+}
+#page3 img{
+    height: 100px;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+#page3 #colon1{
+    top: 15%;
+    left: 15%;
+}
+#page3 #colon2{
+    top: 57%;
+    right: 15%;
+}
+#page4{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    position: relative;
+}
+#elem img{
+    height: 300px;
+    width: 400px;
+    object-fit: cover;
+    transition: all ease 0.5s;
+    scale:1.5
+}
+#elem{
+    height: 70%;
+    width: 20%;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+#elem h2{
+    height: 100%;
+    width: 100%;
+    background-color: #94bce9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    position: absolute;
+    z-index: 10;
+    transition: all ease 0.5s;
+}
+#elem h2:hover{
+    background-color: transparent;
+}
+#elem:hover img{
+    scale: 1;
+}
+#page4 h1{
+    font-size: 100px;
+    font-weight: 900;
+    position: absolute;
+    top: -4%;
+    color: black;
+    -webkit-text-stroke: 3px white;
+}
+#footer{
+    height: 50vh;
+    width: 100%;
+    background: linear-gradient(rgb(0, 170, 255), violet);
+    display: flex;
+    padding: 80px 190px;
+}
+#footerL{
+    height: 100%;
+    width: 34%;
+}
+#footerL #icon{
+    display: flex;
+    font-size: 42px;
+    gap: 57px;
+    margin-top: 12px;
+}
+#footerR {
+    height: 100%;
+    width: 66%;
+    display: flex;
+    gap: 50px;
+
+}
+#footerR #footcon{
+    line-height: 44px;
+}
+#footerlast{
+    font-weight: 300;
+    background-color: violet;
+    padding: 10px 15px;
+}
