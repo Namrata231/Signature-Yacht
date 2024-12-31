@@ -10,6 +10,8 @@ Facilitate the management of water activities.
 Help users gain insights into their spending patterns by categorizing and filtering expenses.
 Easy user interactive design with animations.
 Serve as an introductory project for beginners to learn fundamental web development programming concepts, database interactions, and command-line interface design.
+
+
 Technologies used:
 Programming languages: HTML5, CSS3, Javascript.
 Library used: GSAP
